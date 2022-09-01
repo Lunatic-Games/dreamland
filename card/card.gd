@@ -2,15 +2,21 @@ extends TextureRect
 
 
 signal drag_started
-signal drag_ended
+signal drag_succeeded
+signal drag_failed
 
 const HOVER_SCALE_MODIFIER: float = 1.5
 
 var is_being_dragged: bool = false
-var data: CardData = null
+var data: CardData = preload("res://card/card_datas/pencil.tres")
 
 onready var base_scale: Vector2 = rect_scale
 onready var button: Button = $Button
+onready var card_area: Area2D = $CardArea
+
+
+func _ready():
+	texture = data.texture
 
 
 # Follow mouse if being dragged
@@ -42,5 +48,18 @@ func _on_Button_button_down():
 
 # End drag on button release
 func _on_Button_button_up():
-	is_being_dragged = false
-	emit_signal("drag_ended")
+	var hovered_interactable = get_hovered_interactable()
+	if hovered_interactable:
+		hovered_interactable.get_parent().interact(data)
+		emit_signal("drag_succeeded")
+		queue_free()
+	else:
+		is_being_dragged = false
+		emit_signal("drag_failed")
+
+
+func get_hovered_interactable() -> Control:
+	for area in card_area.get_overlapping_areas():
+		if area.is_in_group("interactable_area"):
+			return area
+	return null

@@ -1,7 +1,7 @@
 extends Control
 
 
-const CARD: PackedScene = preload("res://hand/card.tscn")
+const CARD: PackedScene = preload("res://card/card.tscn")
 const SPACE_BETWEEN_CARDS: float = 5.0
 const HOVER_Y_OFFSET: float = 20.0
 
@@ -13,7 +13,7 @@ onready var cards_to_sort: Array = get_children()
 func _ready() -> void:
 	for card in get_children():
 		card.connect("drag_started", self, "_on_card_drag_started", [card])
-		card.connect("drag_ended", self, "_on_card_drag_ended", [card])
+		card.connect("drag_failed", self, "_on_card_drag_failed", [card])
 	sort()
 
 
@@ -53,7 +53,7 @@ func _on_card_drag_started(card: TextureRect) -> void:
 
 
 # Sort card back into hand after drag
-func _on_card_drag_ended(card: TextureRect) -> void:
+func _on_card_drag_failed(card: TextureRect) -> void:
 	assert(not cards_to_sort.has(card), "Releasing a card that is sorted in hand somehow")
 	cards_to_sort.append(card)
 	sort()

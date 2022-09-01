@@ -72,13 +72,4 @@ func _collect_reward(key, rewards):
 	collected_rewards.append(key)
 	for reward in rewards:
 		var card_data = load(reward)
-		# Add them to the players deck
-		pass
-
-
-
-
-
-
-
-
+		# TODO: Add them to the players deck

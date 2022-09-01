@@ -19,6 +19,7 @@ void fragment() {
 }"
 
 [resource]
+resource_local_to_scene = true
 shader = SubResource( 1 )
 shader_param/MASK_SCALE = Vector2( 0.9, 0.9 )
 shader_param/MASK_OFFSET = Vector2( 0.05, 0.2 )
