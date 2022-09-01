@@ -9,3 +9,5 @@ export (int) var required_strength = 1
 
 export (Array) var success_rewards = []
 export (Array) var failure_rewards = []
+export (Array) var success_encounters = []
+export (Array) var failure_encounters = []

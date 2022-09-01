@@ -9,23 +9,23 @@ var collected_rewards = []
 onready var positive_affection_bar = $PositiveAffectionBar
 onready var negative_affection_bar = $NegativeAffectionBar
 onready var character_data = preload("res://interactable/character/character_datas/mr_davis.tres")
-#
+
 #func _process(delta):
 #	if (Input.is_action_just_pressed("ui_accept")):
 #		interact(test_card)
 
 func interact(card_data):
 	match character_data.affection_type:
-		character_data.affection_types.athletics:
+		character_data.AffectionTypes.ATHLETICS:
 			_resolve_result(card_data.athletics_modifier)
 		
-		character_data.affection_types.strength:
+		character_data.AffectionTypes.STRENGTH:
 			_resolve_result(card_data.strength_modifier)
 			
-		character_data.affection_types.intelligence:
+		character_data.AffectionTypes.INTELLIGENCE:
 			_resolve_result(card_data.intelligence_modifier)
 			
-		character_data.affection_types.charisma:
+		character_data.AffectionTypes.CHARISMA:
 			_resolve_result(card_data.charisma_modifier)
 
 func _resolve_result(value):
