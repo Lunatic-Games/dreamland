@@ -2,14 +2,14 @@ extends Resource
 
 class_name CharacterData
 
-enum affection_types {
-	strength,
-	athletics,
-	charisma,
-	intelligence
+enum AffectionTypes {
+	STRENGTH,
+	ATHLETICS,
+	CHARISMA,
+	ITELLIGENCE
 }
 
-export (affection_types) var affection_type
+export (AffectionTypes) var affection_type
 export (int) var affection_threshold = 2
 export (int) var max_affection = 8
 export (int) var min_affection = -8

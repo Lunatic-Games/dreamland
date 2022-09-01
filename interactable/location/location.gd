@@ -9,30 +9,25 @@ func _process(delta):
 		interact(test_card)
 
 func interact(card_data):
-	var did_succeed = _attempt_location(card_data)
+	var did_succeed = _attempt_location_result(card_data)
+	if did_succeed:
+		_handle_location_succeeded()
+	else:
+		_handle_location_failed()
 	print(did_succeed)
 
-func _attempt_location(card_data):
-	if(location_data.required_athletics > card_data.athletics_modifier):
-		return _handle_location_failed()
-		
-	if(location_data.required_charisma > card_data.charisma_modifier):
-		return _handle_location_failed()
-		
-	if(location_data.required_strength > card_data.strength_modifier):
-		return _handle_location_failed()
-		
-	if(location_data.required_intelligence > card_data.intelligence_modifier):
-		return _handle_location_failed()
+func _attempt_location_result(card_data):
+	if(location_data.required_athletics > card_data.athletics_modifier): return false
+	if(location_data.required_charisma > card_data.charisma_modifier):return false
+	if(location_data.required_strength > card_data.strength_modifier):return false
+	if(location_data.required_intelligence > card_data.intelligence_modifier):return false
 	
-	return _handle_location_succeeded()
+	return true
 
 func _handle_location_failed():
-	return false
 	# Add failure cards to the players deck
 	pass
 
 func _handle_location_succeeded():
-	return true
 	# Adds the success cards to the player deck
 	pass
