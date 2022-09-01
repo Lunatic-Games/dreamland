@@ -23,3 +23,15 @@ margin_left = -32.0
 margin_top = -54.0
 margin_right = 32.0
 margin_bottom = 53.0
+
+[node name="Card4" parent="." instance=ExtResource( 3 )]
+margin_left = -32.0
+margin_top = -54.0
+margin_right = 32.0
+margin_bottom = 53.0
+
+[node name="Card5" parent="." instance=ExtResource( 3 )]
+margin_left = -32.0
+margin_top = -54.0
+margin_right = 32.0
+margin_bottom = 53.0
