@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://interactable/character/character_data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+affection_type = 3
+affection_threshold = 1
+max_affection = 8
+min_affection = -8
+affection_reward_thresholds = {
+-8: "SomePenalty",
+-6: "SomePenalty",
+-4: "SomePenalty",
+-2: "SomePenalty",
+2: "SomeReward",
+4: "SomeReward",
+6: "SomeReward",
+8: "SomeReward"
+}
