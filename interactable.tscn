@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interactable.gd" type="Script" id=1]
+[ext_resource path="res://_assets/art/MrDavisDreamCard.jpg" type="Texture" id=2]
+
+[node name="Interactable" type="Control"]
+script = ExtResource( 1 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 5.0
+margin_top = 220.0
+margin_right = 133.0
+margin_bottom = 260.0
+bbcode_enabled = true
+bbcode_text = "[center]Mr Davis"
+text = "Mr Davis"
+
+[node name="CardArt" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.14, 0.14 )
+texture = ExtResource( 2 )
