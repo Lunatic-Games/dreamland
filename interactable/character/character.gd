@@ -1,7 +1,7 @@
 extends "res://interactable/interactable.gd"
 
-export (Resource) var test_card
-export (Resource) var test_card2
+#export (Resource) var test_card
+#export (Resource) var test_card2
 
 var affection_bar
 var current_affection = 0
@@ -10,17 +10,17 @@ onready var positive_affection_bar = $PositiveAffectionBar
 onready var negative_affection_bar = $NegativeAffectionBar
 onready var character_data = preload("res://interactable/character/character_datas/mr_davis.tres")
 
-func _process(delta):
-	if (Input.is_action_just_pressed("ui_accept")):
-		interact(test_card)
+#func _process(delta):
+#	if (Input.is_action_just_pressed("ui_accept")):
+#		interact(test_card)
 
 func interact(card_data):
 	match character_data.affection_type:
-		character_data.affection_types.strength:
-			_resolve_result(card_data.strength_modifier)
-			
 		character_data.affection_types.athletics:
 			_resolve_result(card_data.athletics_modifier)
+		
+		character_data.affection_types.strength:
+			_resolve_result(card_data.strength_modifier)
 			
 		character_data.affection_types.intelligence:
 			_resolve_result(card_data.intelligence_modifier)
@@ -36,7 +36,6 @@ func _resolve_result(value):
 
 func _update_affection(amount):
 	current_affection = clamp(current_affection+amount, character_data.min_affection, character_data.max_affection)
-	print("Current affection => ", current_affection)
 	
 	_update_positive_affection_bar()
 	_update_negative_affection_bar()
