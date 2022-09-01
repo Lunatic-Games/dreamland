@@ -6,7 +6,7 @@ enum AffectionTypes {
 	STRENGTH,
 	ATHLETICS,
 	CHARISMA,
-	ITELLIGENCE
+	INTELLIGENCE
 }
 
 export (AffectionTypes) var affection_type
