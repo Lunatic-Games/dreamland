@@ -13,9 +13,33 @@ _global_script_classes=[ {
 "class": "CardData",
 "language": "GDScript",
 "path": "res://card/card_data.gd"
+}, {
+"base": "Resource",
+"class": "CharacterData",
+"language": "GDScript",
+"path": "res://interactable/character/character_data.gd"
+}, {
+"base": "Resource",
+"class": "EncounterData",
+"language": "GDScript",
+"path": "res://encounter/encounter_data.gd"
+}, {
+"base": "Resource",
+"class": "EventData",
+"language": "GDScript",
+"path": "res://interactable/event/event_data.gd"
+}, {
+"base": "Resource",
+"class": "LocationData",
+"language": "GDScript",
+"path": "res://interactable/location/location_data.gd"
 } ]
 _global_script_class_icons={
-"CardData": ""
+"CardData": "",
+"CharacterData": "",
+"EncounterData": "",
+"EventData": "",
+"LocationData": ""
 }
 
 [application]
