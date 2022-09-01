@@ -1,19 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://test.gd" type="Script" id=1]
 [ext_resource path="res://hand/hand.tscn" type="PackedScene" id=2]
 
 [node name="Game" type="Node2D"]
 
 [node name="Hand" parent="." instance=ExtResource( 2 )]
-margin_left = 624.0
+margin_left = 640.0
 margin_top = 685.0
-margin_right = 624.0
+margin_right = 640.0
 margin_bottom = 685.0
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 515.0
-margin_top = 289.0
-margin_right = 638.0
-margin_bottom = 401.0
-script = ExtResource( 1 )
