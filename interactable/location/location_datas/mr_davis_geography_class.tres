@@ -10,3 +10,5 @@ required_intelligence = 1
 required_strength = 0
 success_rewards = [  ]
 failure_rewards = [  ]
+success_encounters = [  ]
+failure_encounters = [  ]

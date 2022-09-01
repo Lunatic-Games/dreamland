@@ -25,9 +25,17 @@ func _attempt_location_result(card_data):
 	return true
 
 func _handle_location_failed():
+	if randf() <= 0.25:
+		_select_random_encounter(location_data.failure_encounters)
 	# Add failure cards to the players deck
 	pass
 
 func _handle_location_succeeded():
+	if randf() <= 0.25:
+		_select_random_encounter(location_data.success_encounters)
 	# Adds the success cards to the player deck
+	pass
+
+func _select_random_encounter(encounters):
+	var index = randi()%encounters.size()
 	pass
