@@ -5,7 +5,7 @@ export (Resource) var test_card
 var location_data = preload("res://interactable/location/location_datas/mr_davis_geography_class.tres")
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):
 		interact(test_card)
 
@@ -40,5 +40,5 @@ func _handle_location_succeeded():
 
 
 func _select_random_encounter(encounters):
-	var index = randi()%encounters.size()
+	var _index = randi()%encounters.size()
 	# TODO: Finish implementation

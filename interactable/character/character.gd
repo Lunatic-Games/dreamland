@@ -71,5 +71,5 @@ func _check_threshold_rewards():
 func _collect_reward(key, rewards):
 	collected_rewards.append(key)
 	for reward in rewards:
-		var card_data = load(reward)
+		var _card_data = load(reward)
 		# TODO: Add them to the players deck
