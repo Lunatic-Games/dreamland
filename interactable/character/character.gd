@@ -36,6 +36,8 @@ func _resolve_result(value):
 func _update_affection(amount):
 	current_affection = clamp(current_affection+amount, character_data.min_affection, character_data.max_affection)
 	
+	_check_threshold_rewards()
+	
 	_update_positive_affection_bar()
 	_update_negative_affection_bar()
 
@@ -50,3 +52,6 @@ func _update_negative_affection_bar():
 		negative_affection_bar.value = 0
 	else:
 		negative_affection_bar.value = -1 * (float(current_affection) / float(character_data.max_affection)) * negative_affection_bar.max_value
+
+func _check_threshold_rewards():
+	pass
