@@ -1,7 +1,6 @@
 extends "res://interactable/interactable.gd"
 
 #export (Resource) var test_card
-#export (Resource) var test_card2
 
 var affection_bar
 var current_affection = 0

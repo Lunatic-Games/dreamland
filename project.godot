@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "CharacterData",
 "language": "GDScript",
 "path": "res://interactable/character/character_data.gd"
+}, {
+"base": "Resource",
+"class": "LocationData",
+"language": "GDScript",
+"path": "res://interactable/location/location_data.gd"
 } ]
 _global_script_class_icons={
 "CardData": "",
-"CharacterData": ""
+"CharacterData": "",
+"LocationData": ""
 }
 
 [application]
