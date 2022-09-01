@@ -3,7 +3,6 @@
 [ext_resource path="res://interactable/interactable.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/MrDavisDreamCard.jpg" type="Texture" id=2]
 
-
 [node name="Interactable" type="Control"]
 script = ExtResource( 1 )
 

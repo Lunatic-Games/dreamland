@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://interactable/character/character_data.gd"
 }, {
 "base": "Resource",
+"class": "EventData",
+"language": "GDScript",
+"path": "res://interactable/event/event_data.gd"
+}, {
+"base": "Resource",
 "class": "LocationData",
 "language": "GDScript",
 "path": "res://interactable/location/location_data.gd"
@@ -27,6 +32,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "CardData": "",
 "CharacterData": "",
+"EventData": "",
 "LocationData": ""
 }
 
