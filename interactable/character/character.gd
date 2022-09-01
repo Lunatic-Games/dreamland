@@ -4,11 +4,12 @@ extends "res://interactable/interactable.gd"
 
 var affection_bar
 var current_affection = 0
+var collected_rewards = []
 
 onready var positive_affection_bar = $PositiveAffectionBar
 onready var negative_affection_bar = $NegativeAffectionBar
 onready var character_data = preload("res://interactable/character/character_datas/mr_davis.tres")
-
+#
 #func _process(delta):
 #	if (Input.is_action_just_pressed("ui_accept")):
 #		interact(test_card)
@@ -54,4 +55,30 @@ func _update_negative_affection_bar():
 		negative_affection_bar.value = -1 * (float(current_affection) / float(character_data.max_affection)) * negative_affection_bar.max_value
 
 func _check_threshold_rewards():
-	pass
+	var positive_thresholds = character_data.positive_affection_reward_threshold
+	
+	if current_affection > 0:
+		for key in positive_thresholds:
+			if !(key in collected_rewards) && current_affection >= key:
+				_collect_reward(key, positive_thresholds[key])
+	
+	var negative_thresholds = character_data.negative_affection_reward_threshold
+	if current_affection < 0:
+		for key in negative_thresholds:
+			if !(key in collected_rewards) && current_affection <= key:
+				_collect_reward(key, negative_thresholds[key])
+
+func _collect_reward(key, rewards):
+	collected_rewards.append(key)
+	for reward in rewards:
+		var card_data = load(reward)
+		# Add them to the players deck
+		pass
+
+
+
+
+
+
+
+

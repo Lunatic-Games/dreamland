@@ -13,14 +13,15 @@ export (affection_types) var affection_type
 export (int) var affection_threshold = 2
 export (int) var max_affection = 8
 export (int) var min_affection = -8
-export (Dictionary) var affection_reward_thresholds = {
-	2:"SomeReward",
-	4:"SomeReward",
-	6:"SomeReward",
-	8:"SomeReward",
-	-2:"SomePenalty",
-	-4:"SomePenalty",
-	-6:"SomePenalty",
-	-8:"SomePenalty"
+export (Dictionary) var positive_affection_reward_threshold = {
+	2:["res://card/card_datas/pencil.tres"],
+	4:["res://card/card_datas/pencil.tres"],
+	6:["res://card/card_datas/pencil.tres"],
+	8:["res://card/card_datas/pencil.tres", "res://card/card_datas/pencil.tres"]
 }
-
+export (Dictionary) var negative_affection_reward_threshold = {
+	-2:["res://card/card_datas/pencil.tres"],
+	-4:["res://card/card_datas/pencil.tres"],
+	-6:["res://card/card_datas/pencil.tres"],
+	-8:["res://card/card_datas/pencil.tres", "res://card/card_datas/pencil.tres"]
+}
