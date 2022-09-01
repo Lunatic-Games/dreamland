@@ -10,11 +10,17 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Resource",
+"class": "CardData",
+"language": "GDScript",
+"path": "res://card/card_data.gd"
+}, {
+"base": "Resource",
 "class": "CharacterData",
 "language": "GDScript",
 "path": "res://character_data.gd"
 } ]
 _global_script_class_icons={
+"CardData": "",
 "CharacterData": ""
 }
 
