@@ -1,9 +1,13 @@
 extends "res://interactable/interactable.gd"
 
 export (Resource) var test_card
+export (Resource) var location_data = preload("res://interactable/location/location_datas/mr_davis_geography_class.tres")
 
-var location_data = preload("res://interactable/location/location_datas/mr_davis_geography_class.tres")
+onready var encounter_scene = preload("res://encounter/encounter.tscn")
 
+func _ready():
+	randomize()
+	setup_location(location_data)
 
 func _process(_delta: float) -> void:
 	if (Input.is_action_just_pressed("ui_accept")):
@@ -40,5 +44,11 @@ func _handle_location_succeeded():
 
 
 func _select_random_encounter(encounters):
-	var _index = randi()%encounters.size()
-	# TODO: Finish implementation
+	var index = randi()%encounters.size()
+	var encounter = encounter_scene.instance()
+	encounter.setup_encounter(encounters[index])
+	get_tree().root.add_child(encounter)
+
+func setup_location(data):
+	location_data = data
+	$CardArt.texture = data.location_texture
