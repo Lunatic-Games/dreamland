@@ -3,9 +3,6 @@ extends Control
 export (Resource) var test_encounter_data
 var encounter_data
 
-func _ready():
-	setup_encounter(test_encounter_data)
-
 func setup_encounter(new_encounter_data):
 	encounter_data = new_encounter_data
 	$SplashBackground.texture = encounter_data.splash_background
