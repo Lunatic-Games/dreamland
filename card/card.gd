@@ -8,14 +8,15 @@ signal drag_failed
 const HOVER_SCALE_MODIFIER: float = 1.5
 
 var is_being_dragged: bool = false
-var data: CardData = preload("res://card/card_datas/pencil.tres")
+var data: CardData = preload("res://card/card_datas/pencil.tres") setget set_data
 
 onready var base_scale: Vector2 = rect_scale
 onready var button: Button = $Button
 onready var card_area: Area2D = $CardArea
 
 
-func _ready():
+func set_data(card_data: CardData):
+	data = card_data
 	texture = data.texture
 
 
@@ -52,6 +53,7 @@ func _on_Button_button_up():
 	if hovered_interactable:
 		hovered_interactable.get_parent().interact(data)
 		emit_signal("drag_succeeded")
+		Globals.discard.add(data)
 		queue_free()
 	else:
 		is_being_dragged = false

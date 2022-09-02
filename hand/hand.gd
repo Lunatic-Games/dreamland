@@ -11,14 +11,14 @@ onready var cards_to_sort: Array = get_children()
 
 # Connect signals and sort starting hand
 func _ready() -> void:
-	for card in get_children():
-		card.connect("drag_started", self, "_on_card_drag_started", [card])
-		card.connect("drag_failed", self, "_on_card_drag_failed", [card])
-	sort()
+	yield(get_tree(), "idle_frame")
+	var _drawn = draw_from_deck()
+	_drawn = draw_from_deck()
+	_drawn = draw_from_deck()
 
 
 # Position cards in cards_to_sort
-func sort() -> void:
+func sort_cards() -> void:
 	var n_cards: int = cards_to_sort.size()
 	var x: float = -(n_cards * card_size.x + SPACE_BETWEEN_CARDS * (n_cards - 1)) / 2.0
 	var i: int = 0
@@ -49,14 +49,18 @@ func _process(_delta: float) -> void:
 func _on_card_drag_started(card: TextureRect) -> void:
 	assert(cards_to_sort.has(card), "Trying to drag a card that isn't in hand somehow")
 	cards_to_sort.erase(card)
-	sort()
+	sort_cards()
 
 
 # Sort card back into hand after drag
 func _on_card_drag_failed(card: TextureRect) -> void:
 	assert(not cards_to_sort.has(card), "Releasing a card that is sorted in hand somehow")
 	cards_to_sort.append(card)
-	sort()
+	sort_cards()
+
+
+func _on_card_drag_succeeded(_card: TextureRect) -> void:
+	var _new_card = draw_from_deck()
 
 
 # Calculates the size of a card by instancing a reference card (so it doesn't have to be hardcoded)
@@ -64,3 +68,18 @@ func calculate_card_size() -> Vector2:
 	var reference_card = CARD.instance()
 	reference_card.queue_free()  # The card size can still be accessed until the next idle frame
 	return reference_card.rect_size
+
+
+# Draw a card from the deck
+# Returns the drawn card
+func draw_from_deck() -> CardData:
+	var data = Globals.deck.draw()
+	var card = CARD.instance()
+	card.set_data(data)
+	add_child(card)
+	card.connect("drag_started", self, "_on_card_drag_started", [card])
+	card.connect("drag_failed", self, "_on_card_drag_failed", [card])
+	card.connect("drag_succeeded", self, "_on_card_drag_succeeded", [card])
+	cards_to_sort.append(card)
+	sort_cards()
+	return data
