@@ -4,7 +4,6 @@
 [ext_resource path="res://deck/deck.gd" type="Script" id=2]
 [ext_resource path="res://_assets/fonts/shadows_into_light_regular.ttf" type="DynamicFontData" id=3]
 
-
 [sub_resource type="DynamicFont" id=2]
 size = 24
 outline_size = 1

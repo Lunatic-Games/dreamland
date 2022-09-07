@@ -46,8 +46,9 @@ func _handle_location_succeeded():
 func _select_random_encounter(encounters):
 	var index = randi()%encounters.size()
 	var encounter = encounter_scene.instance()
-	encounter.setup_encounter(encounters[index])
 	get_tree().root.add_child(encounter)
+	encounter.setup(encounters[index])
+
 
 func setup_location(data):
 	location_data = data

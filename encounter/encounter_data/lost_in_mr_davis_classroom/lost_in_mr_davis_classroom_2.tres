@@ -3,12 +3,9 @@
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/creepy_forest_path.jpg" type="Texture" id=2]
 
-
 [resource]
 script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
 dialog_text = "After hours of walking through thorny bushes you collapse on the school doorstep. Perhaps if you had paid more attention this would have been easier."
 confirmation_text = "Okay."
-has_more_dialog = false
-has_rewards = false
 rewards = [  ]

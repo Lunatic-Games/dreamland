@@ -3,7 +3,6 @@
 [ext_resource path="res://_assets/fonts/shadows_into_light_regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://encounter/dialog/dialog.gd" type="Script" id=2]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 26
 font_data = ExtResource( 1 )
@@ -42,5 +41,3 @@ margin_right = 224.0
 margin_bottom = 465.0
 custom_fonts/font = SubResource( 2 )
 text = "proceed..."
-
-[connection signal="pressed" from="NextButton" to="." method="_on_NextButton_pressed"]

@@ -21,5 +21,6 @@ func refill_deck() -> void:
 	_update_counter()
 
 
+# Update the label to display current discard size
 func _update_counter() -> void:
 	counter.text = str(cards.size())

@@ -8,6 +8,4 @@ script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
 dialog_text = "Mr Davis continues teleporting the class around the globe. Giving a minituare lesson at each location."
 confirmation_text = "Informational!"
-has_more_dialog = false
-has_rewards = false
 rewards = [  ]

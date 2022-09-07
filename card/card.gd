@@ -15,11 +15,6 @@ onready var button: Button = $Button
 onready var card_area: Area2D = $CardArea
 
 
-func set_data(card_data: CardData):
-	data = card_data
-	texture = data.texture
-
-
 # Follow mouse if being dragged
 func _process(_delta: float) -> void:
 	if is_being_dragged:
@@ -60,8 +55,15 @@ func _on_Button_button_up():
 		emit_signal("drag_failed")
 
 
+# Get the hovered interactable, or null if there is none
 func get_hovered_interactable() -> Control:
 	for area in card_area.get_overlapping_areas():
 		if area.is_in_group("interactable_area"):
 			return area
 	return null
+
+
+# Setter function
+func set_data(card_data: CardData):
+	data = card_data
+	texture = data.texture

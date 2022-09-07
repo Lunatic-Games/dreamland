@@ -1,15 +1,15 @@
 extends TextureRect
 
 
-var cards: Array = [preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres"),
-	preload("res://card/card_datas/pencil.tres")]
+var cards: Array = [preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres"),
+	preload("res://card/card_data/pencil.tres")]
 
 onready var counter: Label = $Counter
 
@@ -30,5 +30,6 @@ func draw() -> CardData:
 	return card
 
 
+# Update the label to display current deck size
 func _update_counter() -> void:
 	counter.text = str(cards.size())

@@ -1,8 +1,7 @@
 extends Control
 
-func setup(text, confirmation_text):
+
+# Setup the dialog box
+func setup(text: String, confirmation_text: String) -> void:
 	$DialogText.bbcode_text = "[center]" + text
 	$NextButton.text = confirmation_text
-
-func _on_NextButton_pressed():
-	pass # Replace with function body.

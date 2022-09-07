@@ -59,6 +59,7 @@ func _on_card_drag_failed(card: TextureRect) -> void:
 	sort_cards()
 
 
+# Refill hand after playing card
 func _on_card_drag_succeeded(_card: TextureRect) -> void:
 	var _new_card = draw_from_deck()
 
