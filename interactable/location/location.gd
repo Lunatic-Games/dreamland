@@ -5,8 +5,6 @@ export (Resource) var location_data = preload("res://interactable/location/locat
 
 var encounter_scene = preload("res://encounter/encounter.tscn")
 
-onready var card_art = $CardArt
-
 
 # Perform setup
 func _ready() -> void:
@@ -22,7 +20,7 @@ func _process(_delta: float) -> void:
 
 func setup(new_location_data: LocationData):
 	location_data = new_location_data
-	card_art.texture = location_data.texture
+	texture = location_data.texture
 
 
 # Play card on location
