@@ -2,12 +2,12 @@
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/mr_davis_living_globe.jpg" type="Texture" id=2]
-[ext_resource path="res://encounter/encounter_data/transporting_globe/transporting_globe_4.tres" type="Resource" id=3]
+[ext_resource path="res://encounter/encounter_data/transporting_globe/part_3.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
-dialog_text = "All of the sudden the room stops spinning, and the sun sits heavily on your skin. Mountains for as far as you can see."
-confirmation_text = "Woah..."
+dialog_text = "As your butt settles into the cold hard seat of your geography class. Mr Davis closes the blinds. \"Today class, we will be going for an adventure\"."
+confirmation_text = "Adventure away!"
 next_dialog = ExtResource( 3 )
 rewards = [  ]

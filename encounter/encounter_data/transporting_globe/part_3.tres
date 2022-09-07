@@ -2,12 +2,12 @@
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/mr_davis_living_globe.jpg" type="Texture" id=2]
-[ext_resource path="res://encounter/encounter_data/transporting_globe/transporting_globe_2.tres" type="Resource" id=3]
+[ext_resource path="res://encounter/encounter_data/transporting_globe/part_4.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
-dialog_text = "He spins the globe that sits squarely in the center of his desk. As it spins, so too does the room. Faster and faster still."
-confirmation_text = "Oh god let me off..."
+dialog_text = "All of the sudden the room stops spinning, and the sun sits heavily on your skin. Mountains for as far as you can see."
+confirmation_text = "Woah..."
 next_dialog = ExtResource( 3 )
 rewards = [  ]

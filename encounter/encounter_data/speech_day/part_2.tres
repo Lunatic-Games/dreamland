@@ -2,12 +2,12 @@
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/speech_day.jpg" type="Texture" id=2]
-[ext_resource path="res://encounter/encounter_data/speech_day/speech_day_2.tres" type="Resource" id=3]
+[ext_resource path="res://encounter/encounter_data/speech_day/part_3.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
-dialog_text = "You have been dreading it all week. Today is speech day, and as is justly so, there will be 500 students in class."
-confirmation_text = "Dread seeps deeper..."
+dialog_text = "Mr Davis stutters through his speech, and is boo'd from the stage. Then the megaphone announces your name. At least it couldn't go worse... right?"
+confirmation_text = "I hope so..."
 next_dialog = ExtResource( 3 )
 rewards = [  ]

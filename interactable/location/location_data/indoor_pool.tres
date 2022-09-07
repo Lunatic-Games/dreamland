@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-location_texture = ExtResource( 2 )
+texture = ExtResource( 2 )
 required_athletics = 2
 required_charisma = 0
 required_intelligence = 0

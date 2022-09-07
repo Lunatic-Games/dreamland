@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
-[ext_resource path="res://encounter/encounter_data/the_rocket_skipped_stone/the_rocket_skipped_stone_2.tres" type="Resource" id=2]
+[ext_resource path="res://encounter/encounter_data/the_rocket_skipped_stone/part_2.tres" type="Resource" id=2]
 [ext_resource path="res://_assets/art/dream_ai/rocket_skipped_rock.jpg" type="Texture" id=3]
 
 [resource]

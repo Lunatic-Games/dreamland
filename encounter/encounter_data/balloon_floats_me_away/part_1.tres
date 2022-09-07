@@ -2,12 +2,12 @@
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/balloon_floats_me_away.jpg" type="Texture" id=2]
-[ext_resource path="res://encounter/encounter_data/balloon_floats_me_away/balloon_floats_me_away_4.tres" type="Resource" id=3]
+[ext_resource path="res://encounter/encounter_data/balloon_floats_me_away/part_2.tres" type="Resource" id=3]
 
 [resource]
 script = ExtResource( 1 )
 splash_background = ExtResource( 2 )
-dialog_text = "You go higher and higher until the school is just a speck below you. Then, the balloon pops. Sending you in a free fall towards the earth."
-confirmation_text = "Really uh oh!"
+dialog_text = "You gaze out the window, and your focus is slowly sucked over the rolling hills and up into the golden sky above. Then, you start to feel something."
+confirmation_text = "What do I feel?"
 next_dialog = ExtResource( 3 )
 rewards = [  ]
