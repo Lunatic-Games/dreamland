@@ -29,7 +29,7 @@ func interact(card_data):
 			_resolve_result(card_data.charisma_modifier)
 
 func _resolve_result(value):
-	if value > character_data.affection_threshold:
+	if _succeeded_perform_chance_check(character_data.affection_threshold, value):
 		_update_affection(1)
 	else:
 		_update_affection(-1)
