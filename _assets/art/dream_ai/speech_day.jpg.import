@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/paint_splash.png-c0aca7f5c8d977cd3d9c79b3c1cf938d.stex"
+path="res://.import/speech_day.jpg-1bfa3085fd6d0e9b02562e8709d915c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/paint_splash.png"
-dest_files=[ "res://.import/paint_splash.png-c0aca7f5c8d977cd3d9c79b3c1cf938d.stex" ]
+source_file="res://_assets/art/dream_ai/speech_day.jpg"
+dest_files=[ "res://.import/speech_day.jpg-1bfa3085fd6d0e9b02562e8709d915c2.stex" ]
 
 [params]
 

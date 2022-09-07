@@ -1,8 +1,9 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
-[ext_resource path="res://_assets/art/creepy_forest_path_dream.jpg" type="Texture" id=2]
+[ext_resource path="res://_assets/art/dream_ai/creepy_forest_path.jpg" type="Texture" id=2]
 [ext_resource path="res://encounter/encounter_data/lost_in_mr_davis_classroom_2.tres" type="Resource" id=3]
+
 
 [resource]
 script = ExtResource( 1 )

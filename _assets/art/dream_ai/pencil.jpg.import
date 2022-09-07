@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/balloon_floats_me_away.jpg-2b0434ad4b7d09974669c03a20f21bde.stex"
+path="res://.import/pencil.jpg-9bc9783015a6b4300d8b23245dca5ff0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/balloon_floats_me_away.jpg"
-dest_files=[ "res://.import/balloon_floats_me_away.jpg-2b0434ad4b7d09974669c03a20f21bde.stex" ]
+source_file="res://_assets/art/dream_ai/pencil.jpg"
+dest_files=[ "res://.import/pencil.jpg-9bc9783015a6b4300d8b23245dca5ff0.stex" ]
 
 [params]
 

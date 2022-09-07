@@ -8,7 +8,7 @@ signal drag_failed
 const HOVER_SCALE_MODIFIER: float = 1.5
 
 var is_being_dragged: bool = false
-var data: CardData = preload("res://card/card_datas/pencil.tres") setget set_data
+var data: CardData = preload("res://card/card_data/pencil.tres") setget set_data
 
 onready var base_scale: Vector2 = rect_scale
 onready var button: Button = $Button

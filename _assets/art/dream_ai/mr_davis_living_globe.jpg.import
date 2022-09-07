@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mr_davis_living_globe.jpg-afeea52f1d7d93f86412bdadec6720c2.stex"
+path="res://.import/mr_davis_living_globe.jpg-fef3719377d759b6dd6b112f9225f5b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/mr_davis_living_globe.jpg"
-dest_files=[ "res://.import/mr_davis_living_globe.jpg-afeea52f1d7d93f86412bdadec6720c2.stex" ]
+source_file="res://_assets/art/dream_ai/mr_davis_living_globe.jpg"
+dest_files=[ "res://.import/mr_davis_living_globe.jpg-fef3719377d759b6dd6b112f9225f5b2.stex" ]
 
 [params]
 

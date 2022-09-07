@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/indoor_pool.jpg-083f364522f49f8ca3637ff736380d19.stex"
+path="res://.import/balloon_floats_me_away.jpg-7e3f65867b4b7163aae73bff7c537c76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/indoor_pool.jpg"
-dest_files=[ "res://.import/indoor_pool.jpg-083f364522f49f8ca3637ff736380d19.stex" ]
+source_file="res://_assets/art/dream_ai/balloon_floats_me_away.jpg"
+dest_files=[ "res://.import/balloon_floats_me_away.jpg-7e3f65867b4b7163aae73bff7c537c76.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rocket_skipped_rock.jpg-324e7f7e76d38553e9559df2fb59423c.stex"
+path="res://.import/mr_davis.jpg-896811275bf8fb758d339a4910cdb224.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/rocket_skipped_rock.jpg"
-dest_files=[ "res://.import/rocket_skipped_rock.jpg-324e7f7e76d38553e9559df2fb59423c.stex" ]
+source_file="res://_assets/art/dream_ai/mr_davis.jpg"
+dest_files=[ "res://.import/mr_davis.jpg-896811275bf8fb758d339a4910cdb224.stex" ]
 
 [params]
 

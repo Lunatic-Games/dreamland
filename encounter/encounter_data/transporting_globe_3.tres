@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
 [ext_resource path="res://encounter/encounter_data.gd" type="Script" id=1]
-[ext_resource path="res://_assets/art/mr_davis_living_globe.jpg" type="Texture" id=2]
+[ext_resource path="res://_assets/art/dream_ai/mr_davis_living_globe.jpg" type="Texture" id=2]
 [ext_resource path="res://encounter/encounter_data/transporting_globe_4.tres" type="Resource" id=3]
 
 [resource]

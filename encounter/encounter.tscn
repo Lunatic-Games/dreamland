@@ -1,11 +1,12 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://encounter/encounter.gd" type="Script" id=1]
-[ext_resource path="res://_assets/art/creepy_forest_path_dream.jpg" type="Texture" id=2]
+[ext_resource path="res://_assets/art/dream_ai/creepy_forest_path.jpg" type="Texture" id=2]
 [ext_resource path="res://shaders/mask.tres" type="Material" id=3]
 [ext_resource path="res://_assets/fonts/shadows_into_light_regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://encounter/encounter_data/lost_in_mr_davis_classroom_1.tres" type="Resource" id=5]
-[ext_resource path="res://encounter/dialog.gd" type="Script" id=6]
+[ext_resource path="res://encounter/dialog/dialog.gd" type="Script" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 size = 26

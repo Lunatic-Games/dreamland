@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MrDavisDreamCard.jpg-62351b85c2ca40ee38a924f82ff4d9a5.stex"
+path="res://.import/paint_splash.png-962a8661225da78307c28d22d3c873ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/MrDavisDreamCard.jpg"
-dest_files=[ "res://.import/MrDavisDreamCard.jpg-62351b85c2ca40ee38a924f82ff4d9a5.stex" ]
+source_file="res://_assets/art/masks/paint_splash.png"
+dest_files=[ "res://.import/paint_splash.png-962a8661225da78307c28d22d3c873ef.stex" ]
 
 [params]
 

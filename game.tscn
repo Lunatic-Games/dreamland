@@ -5,7 +5,7 @@
 [ext_resource path="res://interactable/location/location.tscn" type="PackedScene" id=3]
 [ext_resource path="res://deck/deck.tscn" type="PackedScene" id=4]
 [ext_resource path="res://discard/discard.tscn" type="PackedScene" id=5]
-[ext_resource path="res://interactable/location/location_datas/mr_davis_geography_class.tres" type="Resource" id=6]
+[ext_resource path="res://interactable/location/location_data/mr_davis_geography_class.tres" type="Resource" id=6]
 
 [node name="Game" type="Node2D"]
 

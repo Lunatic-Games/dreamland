@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/geography_classroom.jpg-72fdad851eaac73e1a886f19a4b82264.stex"
+path="res://.import/rocket_skipped_rock.jpg-e32398e539253ecaf412347a14362226.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_assets/art/geography_classroom.jpg"
-dest_files=[ "res://.import/geography_classroom.jpg-72fdad851eaac73e1a886f19a4b82264.stex" ]
+source_file="res://_assets/art/dream_ai/rocket_skipped_rock.jpg"
+dest_files=[ "res://.import/rocket_skipped_rock.jpg-e32398e539253ecaf412347a14362226.stex" ]
 
 [params]
 

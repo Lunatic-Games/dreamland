@@ -8,7 +8,7 @@ var collected_rewards = []
 
 onready var positive_affection_bar = $PositiveAffectionBar
 onready var negative_affection_bar = $NegativeAffectionBar
-onready var character_data = preload("res://interactable/character/character_datas/mr_davis.tres")
+onready var character_data = preload("res://interactable/character/character_data/mr_davis.tres")
 
 #func _process(delta):
 #	if (Input.is_action_just_pressed("ui_accept")):

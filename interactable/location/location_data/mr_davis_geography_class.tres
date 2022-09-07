@@ -7,7 +7,7 @@
 [ext_resource path="res://encounter/encounter_data/lost_in_mr_davis_classroom_1.tres" type="Resource" id=5]
 [ext_resource path="res://encounter/encounter_data/the_rocket_skipped_stone_1.tres" type="Resource" id=6]
 [ext_resource path="res://encounter/encounter_data/balloon_floats_me_away_1.tres" type="Resource" id=7]
-[ext_resource path="res://_assets/art/geography_classroom.jpg" type="Texture" id=8]
+[ext_resource path="res://_assets/art/dream_ai/geography_classroom.jpg" type="Texture" id=8]
 
 [resource]
 script = ExtResource( 1 )

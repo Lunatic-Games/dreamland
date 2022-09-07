@@ -1,7 +1,7 @@
 extends "res://interactable/interactable.gd"
 
 export (Resource) var test_card
-export (Resource) var location_data = preload("res://interactable/location/location_datas/mr_davis_geography_class.tres")
+export (Resource) var location_data = preload("res://interactable/location/location_data/mr_davis_geography_class.tres")
 
 onready var encounter_scene = preload("res://encounter/encounter.tscn")
 
