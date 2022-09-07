@@ -20,22 +20,14 @@ func interact(card_data):
 		_handle_location_succeeded()
 	else:
 		_handle_location_failed()
-	print("Interact success: ", did_succeed)
 
 
 func _attempt_location_result(card_data):
 	# Perform the chance check for each location
-	if !_succeeded_perform_chance_check(location_data.required_athletics, card_data.athletics_modifier):
-		return false
-	
-	if!_succeeded_perform_chance_check(location_data.required_charisma, card_data.charisma_modifier): 
-		return false
-	
-	if!_succeeded_perform_chance_check(location_data.required_strength, card_data.strength_modifier):
-		return false
-	
-	if!_succeeded_perform_chance_check(location_data.required_intelligence, card_data.intelligence_modifier): 
-		return false
+	if !_succeeded_perform_chance_check(location_data.required_athletics, card_data.athletics_modifier): return false
+	if!_succeeded_perform_chance_check(location_data.required_charisma, card_data.charisma_modifier): return false
+	if!_succeeded_perform_chance_check(location_data.required_strength, card_data.strength_modifier): return false
+	if!_succeeded_perform_chance_check(location_data.required_intelligence, card_data.intelligence_modifier): return false
 	
 	return true
 
