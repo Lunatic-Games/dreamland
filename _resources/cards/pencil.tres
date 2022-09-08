@@ -9,5 +9,5 @@ display_name = "Pencil"
 texture = ExtResource( 2 )
 athletics_modifier = 0
 charisma_modifier = 0
-intelligence_modifier = 2
+intelligence_modifier = 1
 strength_modifier = 0

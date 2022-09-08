@@ -1,6 +1,7 @@
 extends TextureRect
 
 const REQUIRED_CHANCE_ROLL = 4
+const DIE_FACES_MINUS_ONE = 5
 
 onready var interactable_area: Area2D = $InteractableArea
 onready var outline: ColorRect = $Outline
@@ -18,10 +19,11 @@ func _process(_delta: float) -> void:
 func interact(_card_data: CardData) -> void:
 	pass
 
-func _succeeded_perform_chance_check(successes_needed, chances):
+# Used when an interactable requires a stat to be tested
+func _succeeded_stat_test(successes_needed: int, chances: int) -> bool:
 	var successes = 0
 	for chance in chances:
-		var result = randi()%5
+		var result = randi()%DIE_FACES_MINUS_ONE
 		if result >= REQUIRED_CHANCE_ROLL:
 			successes += 1
 	
