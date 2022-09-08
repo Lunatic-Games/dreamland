@@ -23,11 +23,11 @@ func interact(card_data: CardData) -> void:
 		character_data.AffectionTypes.CHARISMA:
 			_resolve_result(card_data.charisma_modifier)
 
-
 # Determine if they pass the check
 func _resolve_result(value: int) -> void:
-	if value >= character_data.affection_difficulty_check:
+	if _succeeded_stat_test(character_data.affection_difficulty_check, value):
 		_alter_affection(1)
+
 	else:
 		_alter_affection(-1)
 
