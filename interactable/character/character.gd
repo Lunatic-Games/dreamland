@@ -25,8 +25,8 @@ func interact(card_data: CardData) -> void:
 
 # Determine if they pass the check
 func _resolve_result(value):
-	if _succeeded_perform_chance_check(character_data.affection_threshold, value):
-		_update_affection(1)
+	if _succeeded_perform_chance_check(character_data.affection_difficulty_check, value):
+		_alter_affection(1)
 
 	else:
 		_alter_affection(-1)

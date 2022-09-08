@@ -32,7 +32,7 @@ func interact(card_data: CardData) -> void:
 		_handle_location_failed()
 
 # Check if card beats location requirements
-func _attempt_location_result(card_data):
+func _card_passes_requirements(card_data):
 	if !_succeeded_perform_chance_check(location_data.required_athletics, card_data.athletics_modifier): return false
 	if!_succeeded_perform_chance_check(location_data.required_charisma, card_data.charisma_modifier): return false
 	if!_succeeded_perform_chance_check(location_data.required_strength, card_data.strength_modifier): return false
