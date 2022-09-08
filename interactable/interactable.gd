@@ -1,4 +1,4 @@
-extends Node
+extends TextureRect
 
 const REQUIRED_CHANCE_ROLL = 4
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://_resources/encounter_data.gd" type="Script" id=1]
+[ext_resource path="res://_assets/art/dream_ai/speech_day.jpg" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+splash_background = ExtResource( 2 )
+dialog_text = "You begin your speech on Uraguays warphole to the shadow dimension. Your eyes barely open, bracing yourself for the onslaught of stones but they never come. You deliver your whole speech and in the end receive a reward for excellence."
+confirmation_text = "I am excellent."
+rewards = [  ]

@@ -11,7 +11,7 @@ onready var cards_to_sort: Array = get_children()
 
 # Connect signals and sort starting hand
 func _ready() -> void:
-	yield(get_tree(), "idle_frame")
+	yield(get_tree(), "idle_frame")  # Need to wait until player deck is ready
 	var _drawn = draw_from_deck()
 	_drawn = draw_from_deck()
 	_drawn = draw_from_deck()
@@ -59,6 +59,7 @@ func _on_card_drag_failed(card: TextureRect) -> void:
 	sort_cards()
 
 
+# Refill hand after playing card
 func _on_card_drag_succeeded(_card: TextureRect) -> void:
 	var _new_card = draw_from_deck()
 
