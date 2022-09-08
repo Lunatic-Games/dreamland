@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://_resources/encounter_data.gd" type="Script" id=1]
+[ext_resource path="res://_assets/art/dream_ai/mr_davis_living_globe.jpg" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+splash_background = ExtResource( 2 )
+dialog_text = "Mr Davis continues teleporting the class around the globe. Giving a minituare lesson at each location."
+confirmation_text = "Informational!"
+rewards = [  ]

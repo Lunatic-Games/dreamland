@@ -1,6 +1,6 @@
 extends "res://interactable/interactable.gd"
 
-var character_data: CharacterData = preload("res://interactable/character/character_data/mr_davis.tres")
+var character_data: CharacterData = preload("res://_resources/characters/mr_davis.tres")
 var current_affection: int = 0
 var collected_rewards: Array = []
 

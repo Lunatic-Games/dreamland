@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://_resources/character_data.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+affection_type = 3
+affection_difficulty_check = 2
+max_affection = 8
+min_affection = -8
+positive_affection_reward_thresholds = {
+2: [ "res://_resources/cards/pencil.tres" ],
+4: [ "res://_resources/cards/pencil.tres" ],
+6: [ "res://_resources/cards/pencil.tres" ],
+8: [ "res://_resources/cards/pencil.tres", "res://_resources/cards/pencil.tres" ]
+}
+negative_affection_reward_thresholds = {
+-8: [ "res://card/card_data/pencil.tres", "res://card/card_data/pencil.tres" ],
+-6: [ "res://card/card_data/pencil.tres" ],
+-4: [ "res://card/card_data/pencil.tres" ],
+-2: [ "res://card/card_data/pencil.tres" ]
+}

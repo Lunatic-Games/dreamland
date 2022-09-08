@@ -1,15 +1,15 @@
 extends TextureRect
 
 
-var cards: Array = [preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres"),
-	preload("res://card/card_data/pencil.tres")]
+var cards: Array = [preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres"),
+	preload("res://_resources/cards/pencil.tres")]
 
 onready var counter: Label = $Counter
 
