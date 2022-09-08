@@ -1,9 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
 [ext_resource path="res://interactable/location/location.gd" type="Script" id=2]
-[ext_resource path="res://card/card_datas/pencil.tres" type="Resource" id=3]
+[ext_resource path="res://_resources/cards/pencil.tres" type="Resource" id=3]
+[ext_resource path="res://_resources/locations/mr_davis_geography_class.tres" type="Resource" id=4]
 
 [node name="Location" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 test_card = ExtResource( 3 )
+location_data = ExtResource( 4 )

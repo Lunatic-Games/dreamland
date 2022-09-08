@@ -1,25 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://encounter/encounter.gd" type="Script" id=1]
-[ext_resource path="res://_assets/art/creepy_forest_path_dream.jpg" type="Texture" id=2]
-[ext_resource path="res://shaders/mask.tres" type="Material" id=3]
-[ext_resource path="res://_assets/font/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://encounter/encounter_data/lost_in_mr_davis_classroom_1.tres" type="Resource" id=5]
-[ext_resource path="res://encounter/dialog.gd" type="Script" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 26
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 18
-font_data = ExtResource( 4 )
+[ext_resource path="res://_assets/art/dream_ai/creepy_forest_path.jpg" type="Texture" id=2]
+[ext_resource path="res://_resources/shaders/mask.tres" type="Material" id=3]
+[ext_resource path="res://encounter/dialog/dialog.tscn" type="PackedScene" id=4]
 
 [node name="Encounter" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-test_encounter_data = ExtResource( 5 )
 
 [node name="SplashBackground" type="TextureRect" parent="."]
 material = ExtResource( 3 )
@@ -29,35 +18,8 @@ margin_right = 5176.0
 margin_bottom = 4836.0
 texture = ExtResource( 2 )
 
-[node name="Dialog" type="Control" parent="."]
-margin_left = 529.0
-margin_top = 180.0
-margin_right = 569.0
-margin_bottom = 220.0
-script = ExtResource( 6 )
+[node name="Dialog" parent="." instance=ExtResource( 4 )]
 
-[node name="DialogBackground" type="ColorRect" parent="Dialog"]
-margin_left = -82.0
-margin_top = -50.0
-margin_right = 307.0
-margin_bottom = 476.0
-color = Color( 0, 0, 0, 0.745098 )
+[connection signal="pressed" from="Dialog/NextButton" to="." method="_on_DialogNextButton_pressed"]
 
-[node name="DialogText" type="RichTextLabel" parent="Dialog"]
-margin_left = -67.0
-margin_top = -32.0
-margin_right = 289.0
-margin_bottom = 411.0
-custom_fonts/normal_font = SubResource( 1 )
-bbcode_enabled = true
-bbcode_text = "[center]You walk into Mr Davis' geography classroom. However as your boot sinks into soft soil and the doorway vanishes behind you, you realize this class is about to get \"extra-curricular\"."
-text = "You walk into Mr Davis' geography classroom. However as your boot sinks into soft soil and the doorway vanishes behind you, you realize this class is about to get \"extra-curricular\"."
-
-[node name="NextButton" type="Button" parent="Dialog"]
-margin_top = 426.0
-margin_right = 224.0
-margin_bottom = 465.0
-custom_fonts/font = SubResource( 2 )
-text = "proceed..."
-
-[connection signal="pressed" from="Dialog/NextButton" to="." method="_on_NextButton_pressed"]
+[editable path="Dialog"]

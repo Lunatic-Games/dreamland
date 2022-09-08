@@ -1,4 +1,4 @@
-extends Node
+extends TextureRect
 
 
 onready var interactable_area: Area2D = $InteractableArea

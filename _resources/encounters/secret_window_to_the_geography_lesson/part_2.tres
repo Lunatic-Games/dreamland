@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://_resources/encounters/secret_window_to_the_geography_lesson/part_3.tres" type="Resource" id=1]
+[ext_resource path="res://_resources/encounter_data.gd" type="Script" id=2]
+[ext_resource path="res://_assets/art/dream_ai/mountain_range_desk.jpg" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 2 )
+splash_background = ExtResource( 3 )
+dialog_text = "Nobody seems to think anything of your new window. Best not to bring it up. However as Mr Davis begins his lessons the window shifts and changes to show the world he is talking about."
+confirmation_text = "Engaging!"
+next_dialog = ExtResource( 1 )
+rewards = [  ]

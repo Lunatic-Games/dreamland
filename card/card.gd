@@ -8,16 +8,11 @@ signal drag_failed
 const HOVER_SCALE_MODIFIER: float = 1.5
 
 var is_being_dragged: bool = false
-var data: CardData = preload("res://card/card_datas/pencil.tres") setget set_data
+var data: CardData = preload("res://_resources/cards/pencil.tres") setget set_data
 
 onready var base_scale: Vector2 = rect_scale
 onready var button: Button = $Button
 onready var card_area: Area2D = $CardArea
-
-
-func set_data(card_data: CardData):
-	data = card_data
-	texture = data.texture
 
 
 # Follow mouse if being dragged
@@ -60,8 +55,15 @@ func _on_Button_button_up():
 		emit_signal("drag_failed")
 
 
+# Get the hovered interactable, or null if there is none
 func get_hovered_interactable() -> Control:
 	for area in card_area.get_overlapping_areas():
 		if area.is_in_group("interactable_area"):
 			return area
 	return null
+
+
+# Setter function
+func set_data(card_data: CardData):
+	data = card_data
+	texture = data.texture

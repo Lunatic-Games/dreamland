@@ -12,27 +12,27 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "CardData",
 "language": "GDScript",
-"path": "res://card/card_data.gd"
+"path": "res://_resources/card_data.gd"
 }, {
 "base": "Resource",
 "class": "CharacterData",
 "language": "GDScript",
-"path": "res://interactable/character/character_data.gd"
+"path": "res://_resources/character_data.gd"
 }, {
 "base": "Resource",
 "class": "EncounterData",
 "language": "GDScript",
-"path": "res://encounter/encounter_data.gd"
+"path": "res://_resources/encounter_data.gd"
 }, {
 "base": "Resource",
 "class": "EventData",
 "language": "GDScript",
-"path": "res://interactable/event/event_data.gd"
+"path": "res://_resources/event_data.gd"
 }, {
 "base": "Resource",
 "class": "LocationData",
 "language": "GDScript",
-"path": "res://interactable/location/location_data.gd"
+"path": "res://_resources/location_data.gd"
 } ]
 _global_script_class_icons={
 "CardData": "",
@@ -45,12 +45,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Dreamland"
-run/main_scene="res://game.tscn"
+run/main_scene="res://game/game.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Globals="*res://globals.gd"
+Globals="*res://game/globals.gd"
 
 [display]
 
