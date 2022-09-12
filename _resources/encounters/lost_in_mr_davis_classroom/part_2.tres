@@ -9,3 +9,6 @@ splash_background = ExtResource( 2 )
 dialog_text = "After hours of walking through thorny bushes you collapse on the school doorstep. Perhaps if you had paid more attention this would have been easier."
 confirmation_text = "Okay."
 rewards = [  ]
+is_skill_test = false
+skill_test_type = 0
+skill_test_difficulty = 1

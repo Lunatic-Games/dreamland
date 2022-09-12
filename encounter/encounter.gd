@@ -2,29 +2,27 @@ extends Control
 
 
 var encounter_data: EncounterData
+var dialog: Object
 
 onready var splash_background: TextureRect = $SplashBackground
-onready var dialog: Control = $Dialog
+
+onready var dialog_scene: PackedScene = preload("res://encounter/dialog/dialog.tscn")
+onready var skill_test_scene: PackedScene = preload("res://encounter/skill_test/skill_test.tscn")
 
 
 # Set up the encounter
 func setup(new_encounter_data: EncounterData) -> void:
 	encounter_data = new_encounter_data
 	splash_background.texture = encounter_data.splash_background
-	dialog.setup(encounter_data.dialog_text, encounter_data.confirmation_text)
-
-
-# Determine what to do on dialogue confirmation
-func _on_DialogNextButton_pressed() -> void:
-	if encounter_data.rewards:
-		_give_rewards(encounter_data.rewards)
 	
-	if encounter_data.next_dialog:
-		setup(encounter_data.next_dialog)
+	if encounter_data.is_skill_test:
+		dialog = skill_test_scene.instance()
 	else:
-		queue_free()
-
+		dialog = dialog_scene.instance()
+	
+	dialog.setup(encounter_data.dialog_text, encounter_data.confirmation_text, self)
+	add_child(dialog)
 
 # Give any encounter rewards to the player
-func _give_rewards(_rewards: Array) -> void:
+func give_rewards(_rewards: Array) -> void:
 	pass

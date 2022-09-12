@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://encounter/encounter.gd" type="Script" id=1]
 [ext_resource path="res://_assets/art/dream_ai/creepy_forest_path.jpg" type="Texture" id=2]
 [ext_resource path="res://_resources/shaders/mask.tres" type="Material" id=3]
-[ext_resource path="res://encounter/dialog/dialog.tscn" type="PackedScene" id=4]
 
 [node name="Encounter" type="Control"]
 anchor_right = 1.0
@@ -17,9 +16,3 @@ margin_top = -164.0
 margin_right = 5176.0
 margin_bottom = 4836.0
 texture = ExtResource( 2 )
-
-[node name="Dialog" parent="." instance=ExtResource( 4 )]
-
-[connection signal="pressed" from="Dialog/NextButton" to="." method="_on_DialogNextButton_pressed"]
-
-[editable path="Dialog"]

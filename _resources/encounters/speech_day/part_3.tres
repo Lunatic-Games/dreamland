@@ -9,3 +9,6 @@ splash_background = ExtResource( 2 )
 dialog_text = "You begin your speech on Uraguays warphole to the shadow dimension. Your eyes barely open, bracing yourself for the onslaught of stones but they never come. You deliver your whole speech and in the end receive a reward for excellence."
 confirmation_text = "I am excellent."
 rewards = [  ]
+is_skill_test = false
+skill_test_type = 0
+skill_test_difficulty = 1
