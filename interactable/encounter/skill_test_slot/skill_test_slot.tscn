@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interactable/interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://interactable/encounter/skill_test_slot/skill_test_slot.gd" type="Script" id=2]
+[ext_resource path="res://_assets/art/dream_ai/oracle_of_destiny.jpg" type="Texture" id=3]
+
+[node name="SkillTestSlot" instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.784314 )
+texture = ExtResource( 3 )
+script = ExtResource( 2 )
+
+[node name="Title" parent="." index="1"]
+visible = false

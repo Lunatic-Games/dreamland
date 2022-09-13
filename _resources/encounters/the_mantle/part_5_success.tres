@@ -1,0 +1,14 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://_resources/encounter_data.gd" type="Script" id=1]
+[ext_resource path="res://_assets/art/dream_ai/geography_classroom.jpg" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+splash_background = ExtResource( 2 )
+dialog_text = "\"Correct!\" Mr. Davis goes on describing the formation of Earth, as the class slowly raises back to the surface. When the bell rings, you notice the sun shining in through the window, brighter than when you entered the classroom. Or was it your eyes that adjusted to the dark?"
+confirmation_text = "\"Either way, it's a beautiful day\""
+rewards = [  ]
+is_skill_test = false
+skill_test_type = 3
+skill_test_difficulty = 1

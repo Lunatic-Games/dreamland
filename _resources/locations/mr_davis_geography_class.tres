@@ -1,13 +1,8 @@
-[gd_resource type="Resource" load_steps=9 format=2]
+[gd_resource type="Resource" load_steps=4 format=2]
 
-[ext_resource path="res://_resources/encounters/balloon_floats_me_away/part_1.tres" type="Resource" id=1]
-[ext_resource path="res://_resources/encounters/lost_in_mr_davis_classroom/part_1.tres" type="Resource" id=2]
-[ext_resource path="res://_resources/encounters/the_rocket_skipped_stone/part_1.tres" type="Resource" id=3]
-[ext_resource path="res://_resources/encounters/secret_window_to_the_geography_lesson/part_1.tres" type="Resource" id=4]
+[ext_resource path="res://_resources/encounters/the_mantle/part_1.tres" type="Resource" id=1]
 [ext_resource path="res://_resources/location_data.gd" type="Script" id=5]
 [ext_resource path="res://_assets/art/dream_ai/geography_classroom.jpg" type="Texture" id=6]
-[ext_resource path="res://_resources/encounters/transporting_globe/part_1.tres" type="Resource" id=7]
-[ext_resource path="res://_resources/encounters/speech_day/part_1.tres" type="Resource" id=8]
 
 [resource]
 script = ExtResource( 5 )
@@ -18,5 +13,5 @@ required_intelligence = 1
 required_strength = 0
 success_rewards = [  ]
 failure_rewards = [  ]
-success_encounters = [ ExtResource( 4 ), ExtResource( 8 ), ExtResource( 7 ) ]
-failure_encounters = [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ) ]
+success_encounters = [ ExtResource( 1 ) ]
+failure_encounters = [ ExtResource( 1 ) ]
