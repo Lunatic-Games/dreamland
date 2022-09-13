@@ -9,3 +9,6 @@ splash_background = ExtResource( 2 )
 dialog_text = "Mr Davis continues teleporting the class around the globe. Giving a minituare lesson at each location."
 confirmation_text = "Informational!"
 rewards = [  ]
+is_skill_test = false
+skill_test_type = 0
+skill_test_difficulty = 1

@@ -9,3 +9,6 @@ splash_background = ExtResource( 2 )
 dialog_text = "Not only does this enhance the storytelling from Mr Davis but the direct contradictions are endlessly entertaining. "
 confirmation_text = "What a good day."
 rewards = [  ]
+is_skill_test = false
+skill_test_type = 0
+skill_test_difficulty = 1

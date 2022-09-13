@@ -9,3 +9,6 @@ splash_background = ExtResource( 2 )
 dialog_text = "You slam into the dirt beside the classroom window. \"Look everyone, this is why you pay attention in class\" says Mr Davis as all of the kids laugh and point at you."
 confirmation_text = "Life is bad."
 rewards = [  ]
+is_skill_test = false
+skill_test_type = 0
+skill_test_difficulty = 1
