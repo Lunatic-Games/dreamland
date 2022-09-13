@@ -3,7 +3,7 @@ extends Control
 var encounter
 
 # Setup the dialog box
-func setup(text: String, confirmation_text: String, parent_encounter: Object) -> void:
+func setup(text: String, confirmation_text: String, parent_encounter: Node) -> void:
 	$DialogText.bbcode_text = "[center]" + text
 	$NextButton.text = confirmation_text
 	encounter = parent_encounter
