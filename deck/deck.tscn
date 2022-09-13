@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://_assets/art/dream_ai/speech_day.jpg" type="Texture" id=1]
+[ext_resource path="res://_assets/art/deck/deck.jpg" type="Texture" id=1]
 [ext_resource path="res://deck/deck.gd" type="Script" id=2]
 [ext_resource path="res://_assets/fonts/shadows_into_light_regular.ttf" type="DynamicFontData" id=3]
 

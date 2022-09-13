@@ -10,9 +10,11 @@ anchor_bottom = 1.0
 script = ExtResource( 1 )
 
 [node name="SplashBackground" type="TextureRect" parent="."]
+self_modulate = Color( 0.372549, 0.372549, 0.372549, 1 )
 material = ExtResource( 3 )
-margin_left = 176.0
-margin_top = -164.0
-margin_right = 5176.0
-margin_bottom = 4836.0
+margin_left = -298.0
+margin_top = -273.0
+margin_right = 1470.0
+margin_bottom = 1499.0
 texture = ExtResource( 2 )
+expand = true
