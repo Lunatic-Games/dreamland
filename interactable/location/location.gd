@@ -21,6 +21,7 @@ func _process(_delta: float) -> void:
 func setup(new_location_data: LocationData):
 	location_data = new_location_data
 	texture = location_data.texture
+	$TitleBackground/Title.text = location_data.display_name
 
 
 # Play card on location

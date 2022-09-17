@@ -5,7 +5,7 @@ signal drag_started
 signal drag_succeeded
 signal drag_failed
 
-const HOVER_SCALE_MODIFIER: float = 1.5
+const HOVER_SCALE_MODIFIER: float = 1.3
 
 var is_being_dragged: bool = false
 var data: CardData = preload("res://_resources/cards/pencil.tres") setget set_data
@@ -13,6 +13,11 @@ var data: CardData = preload("res://_resources/cards/pencil.tres") setget set_da
 onready var base_scale: Vector2 = rect_scale
 onready var button: Button = $Button
 onready var card_area: Area2D = $CardArea
+onready var title: Label = $TitleBackground/Title
+onready var athletics_box = $Stats/Athletics
+onready var charisma_box = $Stats/Charisma
+onready var intelligence_box = $Stats/Intelligence
+onready var strength_box = $Stats/Strength
 
 
 # Follow mouse if being dragged
@@ -67,3 +72,18 @@ func get_hovered_interactable() -> Control:
 func set_data(card_data: CardData):
 	data = card_data
 	texture = data.texture
+	title.text = data.display_name
+	_update_stat_boxes()
+
+
+func _update_stat_boxes():
+	_update_stat_box(athletics_box, data.athletics_modifier)
+	_update_stat_box(charisma_box, data.charisma_modifier)
+	_update_stat_box(intelligence_box, data.intelligence_modifier)
+	_update_stat_box(strength_box, data.strength_modifier)
+
+
+func _update_stat_box(box, value):
+	box.visible = value != 0
+	var label = box.get_node("HBoxContainer/Amount")
+	label.text = "+" + str(value) if value > 0 else str(value)

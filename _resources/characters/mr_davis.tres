@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
+display_name = "Mr. Davis"
 affection_type = 3
 affection_difficulty_check = 1
 max_affection = 8

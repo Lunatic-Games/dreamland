@@ -9,6 +9,7 @@ enum AffectionTypes {
 	INTELLIGENCE
 }
 
+export (String) var display_name
 export (AffectionTypes) var affection_type
 export (int) var affection_difficulty_check = 2
 export (int) var max_affection = 8

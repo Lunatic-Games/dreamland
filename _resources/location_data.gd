@@ -2,6 +2,7 @@ extends Resource
 
 class_name LocationData
 
+export (String) var display_name
 export (Texture) var texture
 
 export (int) var required_athletics = 1
