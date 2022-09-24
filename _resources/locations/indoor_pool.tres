@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
+display_name = "The Pool"
 texture = ExtResource( 2 )
 required_athletics = 2
 required_charisma = 0

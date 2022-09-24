@@ -8,6 +8,10 @@ onready var positive_affection_bar: ProgressBar = $PositiveAffectionBar
 onready var negative_affection_bar: ProgressBar = $NegativeAffectionBar
 
 
+func _ready():
+	$TitleBackground/Title.text = character_data.display_name
+
+
 # Play card on character
 func interact(card_data: CardData) -> void:
 	match character_data.affection_type:

@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource( 5 )
+display_name = "The Classroom"
 texture = ExtResource( 6 )
 required_athletics = 0
 required_charisma = 0

@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 func interact(_card_data: CardData) -> void:
 	pass
 
+
 # Used when an interactable requires a stat to be tested
 func _succeeded_stat_test(successes_needed: int, chances: int) -> bool:
 	var successes = 0

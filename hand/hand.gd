@@ -76,8 +76,8 @@ func calculate_card_size() -> Vector2:
 func draw_from_deck() -> CardData:
 	var data = Globals.deck.draw()
 	var card = CARD.instance()
-	card.set_data(data)
 	add_child(card)
+	card.set_data(data)
 	card.connect("drag_started", self, "_on_card_drag_started", [card])
 	card.connect("drag_failed", self, "_on_card_drag_failed", [card])
 	card.connect("drag_succeeded", self, "_on_card_drag_succeeded", [card])

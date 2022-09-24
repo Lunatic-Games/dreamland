@@ -11,9 +11,9 @@ font_data = ExtResource( 3 )
 extents = Vector2( 67, 109.5 )
 
 [node name="Interactable" type="TextureRect"]
-margin_right = 134.0
-margin_bottom = 219.0
-rect_min_size = Vector2( 134, 219 )
+margin_right = 120.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 140, 210 )
 texture = ExtResource( 2 )
 expand = true
 script = ExtResource( 1 )
@@ -23,22 +23,23 @@ visible = false
 show_behind_parent = true
 margin_left = -2.0
 margin_top = -2.0
-margin_right = 136.0
-margin_bottom = 221.0
+margin_right = 142.0
+margin_bottom = 212.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_top = 192.0
-margin_right = 134.0
-margin_bottom = 219.0
-color = Color( 0, 0, 0, 0.619608 )
+[node name="TitleBackground" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -24.0
+color = Color( 0, 0, 0, 0.878431 )
 
-[node name="Title" type="RichTextLabel" parent="ColorRect"]
-margin_right = 134.0
-margin_bottom = 27.0
-custom_fonts/normal_font = SubResource( 2 )
-bbcode_enabled = true
-bbcode_text = "[center]Mr Davis"
+[node name="Title" type="Label" parent="TitleBackground"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 2 )
 text = "Mr Davis"
+align = 1
+valign = 1
 
 [node name="InteractableArea" type="Area2D" parent="." groups=["interactable_area"]]
 
