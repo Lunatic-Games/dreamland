@@ -5,13 +5,13 @@
 [ext_resource path="res://discard/discard.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=2]
-size = 20
+size = 36
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 36
+size = 48
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
@@ -21,7 +21,7 @@ margin_left = 1190.0
 margin_top = 597.0
 margin_right = 1254.0
 margin_bottom = 704.0
-rect_min_size = Vector2( 64, 107 )
+rect_min_size = Vector2( 140, 210 )
 texture = ExtResource( 1 )
 expand = true
 script = ExtResource( 3 )
