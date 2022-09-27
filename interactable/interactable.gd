@@ -2,6 +2,7 @@ extends TextureRect
 
 const REQUIRED_CHANCE_ROLL = 4
 const DIE_FACES_MINUS_ONE = 5
+const ENCOUNTER_SCENE = preload("res://encounter/encounter.tscn")
 
 onready var interactable_area: Area2D = $InteractableArea
 onready var outline: ColorRect = $Outline
@@ -32,3 +33,16 @@ func _succeeded_stat_test(successes_needed: int, chances: int) -> bool:
 		return true
 	
 	return false
+
+# Spawn a randomly selected encounter
+func _select_random_encounter_from_array(encounters: Array) -> void:
+	var index = randi()%encounters.size()
+	var encounter = ENCOUNTER_SCENE.instance()
+	get_tree().root.get_node("Game/Encounters").add_child(encounter)
+	encounter.setup(encounters[index])
+
+# Spawn a randomly selected encounter
+func _spawn_encounter(encounter_data: EncounterData) -> void:
+	var encounter = ENCOUNTER_SCENE.instance()
+	get_tree().root.get_node("Game/Encounters").add_child(encounter)
+	encounter.setup(encounter_data)
