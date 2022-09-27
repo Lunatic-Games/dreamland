@@ -34,11 +34,8 @@ func _succeeded_stat_test(successes_needed: int, chances: int) -> bool:
 	return false
 
 # Spawn a randomly selected encounter
-func _select_random_encounter_from_array(encounters: Array) -> void:
-	var index = randi()%encounters.size()
-	var encounter = ENCOUNTER_SCENE.instance()
-	get_tree().root.get_node("Game/Encounters").add_child(encounter)
-	encounter.setup(encounters[index])
+func _spawn_random_encounter(encounters: Array) -> void:
+	_spawn_encounter(encounters[randi()%encounters.size()])
 
 # Spawn a randomly selected encounter
 func _spawn_encounter(encounter_data: EncounterData) -> void:

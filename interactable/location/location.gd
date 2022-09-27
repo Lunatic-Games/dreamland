@@ -44,20 +44,12 @@ func _card_passes_requirements(card_data):
 # Player has failed to pass the stat check
 func _handle_location_failed() -> void:
 	if randf() <= 0.25:
-		_select_random_encounter(location_data.failure_encounters)
+		_spawn_random_encounter(location_data.failure_encounters)
 	# TODO: Add failure cards to the players deck
 
 
 # Player has passed the stat check
 func _handle_location_succeeded():
 	if randf() <= 0.25:
-		_select_random_encounter(location_data.success_encounters)
+		_spawn_random_encounter(location_data.success_encounters)
 	# TODO: Adds the success cards to the player deck
-
-
-# Spawn a randomly selected encounter
-func _select_random_encounter(encounters: Array) -> void:
-	var index = randi()%encounters.size()
-	var encounter = encounter_scene.instance()
-	get_tree().root.get_node("Game/Encounters").add_child(encounter)
-	encounter.setup(encounters[index])

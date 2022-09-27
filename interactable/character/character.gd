@@ -80,11 +80,11 @@ func _check_threshold_rewards() -> void:
 func _collect_reward(key: int, rewards: Array) -> void:
 	collected_rewards.append(key)
 	for reward in rewards:
-		var _threshold_data: Resource = load(reward)
+		var threshold_data: Resource = load(reward)
 		
-		if _threshold_data is CardData:
-			Globals.get_deck().add(_threshold_data)
+		if threshold_data is CardData:
+			Globals.get_deck().add(threshold_data)
 		
-		if _threshold_data is EncounterData:
+		if threshold_data is EncounterData:
 			# Trigger the encounter
-			_spawn_encounter(_threshold_data)
+			_spawn_encounter(threshold_data)
