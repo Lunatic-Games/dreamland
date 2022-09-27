@@ -11,7 +11,7 @@ font_data = ExtResource( 3 )
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 105, 157.5 )
 
-[node name="Interactable" type="TextureRect"]
+[node name="Interactable" type="TextureRect" groups=["interactable"]]
 margin_right = 120.0
 margin_bottom = 196.0
 rect_min_size = Vector2( 210, 315 )
