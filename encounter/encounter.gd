@@ -1,12 +1,12 @@
 extends Control
 
 const DIALOG_SCENE: PackedScene = preload("res://encounter/dialog/dialog.tscn")
-const SKILL_TEST_SCENE: PackedScene = preload("res://encounter/skill_test/skill_test.tscn")
 
 var encounter_data: EncounterData
 var dialog: Node
 
 onready var splash_background: TextureRect = $SplashBackground
+onready var SKILL_TEST_SCENE: PackedScene = load("res://encounter/skill_test/skill_test.tscn")
 
 
 # Set up the encounter
