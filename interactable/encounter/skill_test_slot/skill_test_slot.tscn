@@ -8,6 +8,3 @@
 modulate = Color( 1, 1, 1, 0.784314 )
 texture = ExtResource( 3 )
 script = ExtResource( 2 )
-
-[node name="Title" parent="." index="1"]
-visible = false

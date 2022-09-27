@@ -1,9 +1,16 @@
 extends Node
 
 
+var game = null setget , get_game
 var hand = null setget , get_hand
 var deck = null setget , get_deck
 var discard = null setget , get_discard
+
+
+func get_game():
+	if game and is_instance_valid(game):
+		return game
+	return _get_unique_node_from_group("game")
 
 
 # Return the already found hand or search for it in the scene tree
