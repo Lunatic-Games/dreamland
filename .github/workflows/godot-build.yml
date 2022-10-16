@@ -2,7 +2,7 @@ name: Build Executables
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "bigdavisc-auto-builds" ]
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
