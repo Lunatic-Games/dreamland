@@ -46,7 +46,7 @@ jobs:
         if: ${{ inputs.devBuilds }}
         run: |
           mkdir -v -p build/windows-dev
-          godot -v --path . --no-window --export "Windows Desktop Dev" build/windows/$EXPORT_NAME-dev.exe
+          godot -v --path . --no-window --export "Windows Desktop Dev" build/windows-dev/$EXPORT_NAME-dev.exe
       - name: Upload Windows Dev Artifact
         if: ${{ inputs.devBuilds }}
         uses: actions/upload-artifact@v3.1.0
@@ -68,7 +68,7 @@ jobs:
         if: ${{ inputs.devBuilds }}
         run: |
           mkdir -v -p build/linux-dev
-          godot -v --path . --no-window --export "Linux/X11 Dev" build/linux/$EXPORT_NAME-dev.x86_64
+          godot -v --path . --no-window --export "Linux/X11 Dev" build/linux-dev/$EXPORT_NAME-dev.x86_64
       - name: Upload Linux Dev Artifact
         if: ${{ inputs.devBuilds }}
         uses: actions/upload-artifact@v3.1.0
@@ -76,3 +76,24 @@ jobs:
           name: linux-${{ env.EXPORT_NAME }}-dev
           path: build/linux-dev
   
+      - name: Build for HTML5
+        run: |
+          mkdir -v -p build/html5
+          godot -v --path . --no-window --export "HTML5" build/html5/$EXPORT_NAME.zip
+      - name: Upload HTML5 Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: html5-${{ env.EXPORT_NAME }}
+          path: build/html5
+          
+      - name: Build for HTML5 Dev
+        if: ${{ inputs.devBuilds }}
+        run: |
+          mkdir -v -p build/html5-dev
+          godot -v --path . --no-window --export "HTML5 Dev" build/html5-dev/$EXPORT_NAME-dev.zip
+      - name: Upload HTML5 Dev Artifact
+        if: ${{ inputs.devBuilds }}
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: html5-${{ env.EXPORT_NAME }}-dev
+          path: build/html5-dev
