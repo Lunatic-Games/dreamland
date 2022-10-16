@@ -34,5 +34,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: windows
-          path: build/windows
+          name: ${{ env.EXPORT_NAME }}.exe
+          path: build/windows/${{ env.EXPORT_NAME }}.exe
