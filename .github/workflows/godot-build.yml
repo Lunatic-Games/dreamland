@@ -2,18 +2,22 @@ name: Build Executables
 
 on:
   push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "bigdavisc-auto-builds" ]
   workflow_dispatch:
-
+    inputs:
+      devBuilds:
+        description: 'Build Bevelopment Versions?'
+        required: true
+        default: false
+        type: boolean
+        
 env:
   GODOT_VERSION: 3.5.1
   EXPORT_NAME: "Dreamland-${{ github.ref_name }}"
 
 jobs:
-  windows-export:
-    name: Windows Export
+  export:
+    name: Export from Godot
     runs-on: ubuntu-latest
     container:
       image: barichello/godot-ci:latest
@@ -27,12 +31,48 @@ jobs:
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
           cp .github/workflows/export_presets.cfg export_presets.cfg
-      - name: Windows Build
+      
+      - name: Build for Windows
         run: |
           mkdir -v -p build/windows
           godot -v --path . --no-window --export "Windows Desktop" build/windows/$EXPORT_NAME.exe
-      - name: Upload Artifact
+      - name: Upload Windows Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
           name: windows-${{ env.EXPORT_NAME }}
-          path: build/windows/${{ env.EXPORT_NAME }}.exe
+          path: build/windows
+          
+      - name: Build for Windows Dev
+        if: ${{ inputs.devBuilds }}
+        run: |
+          mkdir -v -p build/windows-dev
+          godot -v --path . --no-window --export "Windows Desktop Dev" build/windows/$EXPORT_NAME-dev.exe
+      - name: Upload Windows Dev Artifact
+        if: ${{ inputs.devBuilds }}
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: windows-${{ env.EXPORT_NAME }}-dev
+          path: build/windows-dev
+          
+      - name: Build for Lunix
+        run: |
+          mkdir -v -p build/linux
+          godot -v --path . --no-window --export "Linux/X11" build/linux/$EXPORT_NAME.x86_64
+      - name: Upload Linux Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: linux-${{ env.EXPORT_NAME }}
+          path: build/linux
+          
+      - name: Build for Lunix Dev
+        if: ${{ inputs.devBuilds }}
+        run: |
+          mkdir -v -p build/linux-dev
+          godot -v --path . --no-window --export "Linux/X11 Dev" build/linux/$EXPORT_NAME-dev.x86_64
+      - name: Upload Linux Dev Artifact
+        if: ${{ inputs.devBuilds }}
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: linux-${{ env.EXPORT_NAME }}-dev
+          path: build/linux-dev
+  
