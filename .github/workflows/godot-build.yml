@@ -9,7 +9,7 @@ on:
 
 env:
   GODOT_VERSION: 3.5.1
-  EXPORT_NAME: "Dreamland-$GITHUB_REF_NAME"
+  EXPORT_NAME: "Dreamland-${{ env.GITHUB_REF_NAME }}"
 
 jobs:
   windows-export:
