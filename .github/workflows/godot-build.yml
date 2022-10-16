@@ -2,7 +2,7 @@ name: Build Executables
 
 on:
   push:
-    branches: [ "master", "bigdavisc-auto-builds" ]
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
@@ -34,5 +34,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
-          name: ${{ env.EXPORT_NAME }}.exe
+          name: windows-${{ env.EXPORT_NAME }}
           path: build/windows/${{ env.EXPORT_NAME }}.exe
